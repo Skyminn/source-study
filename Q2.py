@@ -1,25 +1,33 @@
-#1부터 n까지의 합 구하기
-#예제1-1
-def sum(n):
-    s=0
-    for i in range (1,n+1):
-        s+=i
-    return s
-print(sum(10))
-print(sum(100))
+#예제2-1
+def find_max(a):
+    n=len(a)
+    max=a[0]
+    for i in range(1,n):
+        if a[i]>max:
+            max=a[i]
+    return max
 
-#예제1-2
-def sum_2(n):
-    return n*(n+1)//2
-print(sum_2(10))
-print(sum_2(100))
+v=[17, 92, 18, 33, 58, 7, 33, 42]
+print(find_max(v))
 
-#연습문제 1-1
-def sum_3(n):
-    s=0
-    for i in range(1,n+1):
-        s=s+pow(i,2)
-    return s
-print(sum_3(10))
-#연습문제 1-2 :O(n)
-#연습문제 1-3: O(1)
+#예제2-2
+def find_index(a):
+    n=len(a)
+    max_index=0
+    for i in range(1,n):
+        if a[i]>a[max_index]:
+            max_index=i
+    return max_index
+v=[17, 92, 18, 33, 58, 7, 33, 42]
+print(find_index(v))
+
+#연습문제 2-1
+def find_min(a):
+    n=len(a)
+    min=a[0]
+    for i in range(1,n):
+        if a[i]<a[0]:
+            min=a[i]
+    return min
+v=[17, 92, 18, 33, 58, 7, 33, 42]
+print(find_min(v))
